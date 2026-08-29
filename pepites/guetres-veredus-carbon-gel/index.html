@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>La protection ultime des tendons — Pépite du moment | cavalière futée</title>
+<meta name="description" content="Guêtres Veredus Carbon Gel Vento Front Brown : pourquoi c'est une pépite du moment, notre avis, et où les trouver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="accueil">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="/assets/guetres-veredus-carbon-gel.jpg" alt="Guêtres Veredus Carbon Gel Vento Front Brown">
+          <span class="badge badge-terracotta">Pépite technique</span>
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Protections & tendons</span>
+          <h1>La protection ultime des tendons</h1>
+          <p class="product-subtitle">Veredus Carbon Gel Vento — guêtres antérieures brown</p>
+          <span class="product-price">209,99€</span>
+          <p class="product-pitch">Premières guêtres au monde à double ventilation, coque anatomique en carbone et Nitrexgel intégré pour absorber les chocs. Testées et approuvées par Marcus Ehning et les plus grands cavaliers internationaux de CSO.</p>
+          <a href="#offre" class="btn btn-primary">Voir les guêtres ↓</a>
+        </div>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi c'est une pépite</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Premières guêtres au monde à double ventilation — horizontale et verticale simultanément.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Coque anatomique en carbone ultra légère et résistante — protection maximale sans alourdir les membres.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Nitrexgel intégré — absorbe les chocs et protège le tendon fléchisseur et le boulet.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Néoprène microporeux — évacue la chaleur du membre en plein effort pour maintenir les tendons au frais.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Mesh 3D canalisé — fait circuler l'air frais de l'intérieur vers l'extérieur en continu.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Fermeture rapide par lanières élastiques réglables — mise en place simple et sécurisée.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Testées et approuvées par Marcus Ehning et les plus grands cavaliers internationaux de CSO.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Coloris brown exclusif — élégant et différenciant sur le carreau.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis honnête</h2>
+        <p>Les Veredus Carbon Gel Vento c'est la référence absolue en matière de protection des tendons pour les chevaux de sport. Ce qui les distingue vraiment de toutes les autres guêtres du marché c'est leur système de double ventilation — une innovation qui change réellement la donne pour les chevaux qui travaillent en pleine chaleur ou lors de longues journées de concours. Les tendons restent au frais, le cheval est mieux protégé et récupère plus vite. Oui le prix est élevé — mais quand on sait ce qu'une blessure de tendon peut coûter en frais vétérinaires et en arrêt de travail, c'est clairement le meilleur investissement qu'on puisse faire pour son cheval.</p>
+      </div>
+
+      <div id="offre" class="product-section affiliate-block reveal">
+        <div class="affiliate-ctas">
+          <a href="https://horze.fr/products/carbon-gel-vento-front-brown" class="btn btn-primary" rel="sponsored noopener" target="_blank">Voir les guêtres sur Horze →</a>
+        </div>
+        <p class="affiliate-disclosure">Lien affilié — cela ne change pas le prix pour vous.</p>
+      </div>
+
+      <div class="product-section">
+        <h2>Autres pépites du moment</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'guetres-veredus-carbon-gel');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>

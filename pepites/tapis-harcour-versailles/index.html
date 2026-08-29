@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection limitée Harcour x Versailles — Pépite du moment | cavalière futée</title>
+<meta name="description" content="Tapis Harcour x Versailles Charles Marine : pourquoi c'est une pépite du moment, notre avis, et où le trouver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="accueil">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="/assets/tapis-harcour-versailles.jpg" alt="Tapis Harcour x Versailles Charles Marine">
+          <span class="badge badge-terracotta">Pépite du moment</span>
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Tapis & Amortisseurs</span>
+          <h1>Collection limitée Harcour x Versailles</h1>
+          <p class="product-subtitle">Harcour x Versailles — Collection Charles Marine</p>
+          <span class="product-price">69,98€</span>
+          <p class="product-pitch">Une collaboration exclusive entre Harcour et le Château de Versailles : coupe anatomique dégarrottée, intérieur en coton gaufré et finitions haut de gamme. Un tapis collector, élégant et fonctionnel.</p>
+          <a href="#offre" class="btn btn-primary">Voir le tapis ↓</a>
+        </div>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi c'est une pépite</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Collection exclusive Harcour x Versailles — un tapis collector élégant qu'on ne voit pas partout.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Coupe anatomique dégarrottée — s'adapte parfaitement à toutes les morphologies de chevaux sans gêner le garrot.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Intérieur en coton gaufré — respirabilité et absorption optimales même en plein effort.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Matière polycoton douce et confortable — agréable pour le dos du cheval.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Double logo brodé : Harcour x Versailles sur le côté gauche, Harcour sur le côté droit.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Patch logo Harcour en simili-cuir au garrot — finition haut de gamme.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Reste bien en place sous la selle même lors des séances les plus intenses.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis</h2>
+        <p>Le tapis Harcour x Versailles Charles c'est le coup de cœur qu'on n'avait pas prévu mais qu'on ne regrette pas. Cette collaboration entre Harcour et le Château de Versailles donne quelque chose d'unique — élégant sans être ostentatoire, fonctionnel sans compromis. Le marine est une valeur sûre qui s'associe à tout, et la qualité de fabrication est au rendez-vous. C'est exactement le genre de pépite qu'on aime vous dénicher : un produit premium qui se justifie pleinement, à un prix qui reste raisonnable pour la qualité offerte.</p>
+      </div>
+
+      <div id="offre" class="product-section affiliate-block reveal">
+        <div class="affiliate-ctas">
+          <a href="https://harcour.fr/fr/harcour-x-versailles/2286-charles-tapis-de-selle-versailles-marine-navy.html" class="btn btn-primary" rel="sponsored noopener" target="_blank">Voir le tapis sur Harcour →</a>
+        </div>
+      </div>
+
+      <div class="product-section">
+        <h2>Autres pépites du moment</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'tapis-harcour-versailles');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>

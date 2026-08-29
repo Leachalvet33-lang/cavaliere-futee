@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le secret des dos difficiles — Pépite du moment | cavalière futée</title>
+<meta name="description" content="Acavallo Gel Pad surélevé à l'arrière noir : pourquoi c'est une pépite du moment, notre avis, et où le trouver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="accueil">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="/assets/acavallo-gel-pad.jpg" alt="Acavallo Gel Pad surélevé à l'arrière noir">
+          <span class="badge badge-terracotta">Pépite bien-être</span>
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Tapis & Amortisseurs</span>
+          <h1>Le secret des dos difficiles</h1>
+          <p class="product-subtitle">Acavallo Gel Pad — surélevé à l'arrière, noir</p>
+          <span class="product-price">66,60€</span>
+          <p class="product-pitch">Un gel thérapeutique anatomique qui relève la selle à l'arrière pour rééquilibrer l'assiette du cavalier et soulager le dos du cheval. Discret, léger, et compatible avec toutes les selles.</p>
+          <a href="#offre" class="btn btn-primary">Voir le pad ↓</a>
+        </div>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi c'est une pépite</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Surélevé à l'arrière — relève la selle à l'arrière pour rééquilibrer l'assiette du cavalier et soulager le dos du cheval.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Gel thérapeutique anatomique — absorbe les chocs et répartit uniformément le poids du cavalier.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Surface collante anti-glisse — reste parfaitement en place sans bouger ni pivoter sous la selle.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Profil bas de seulement 8mm — compatible avec toutes les selles y compris les selles close-contact.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Gel antibactérien, atoxique et hypoallergénique — peut être appliqué directement sur le dos du cheval.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Très léger et flexible — ne modifie pas la forme de la selle.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Ajustable vers l'avant et vers l'arrière pour moduler l'effet de rehaussement.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Entretien ultra simple — se rince à l'eau claire ou se lave en machine à 30°C.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis honnête</h2>
+        <p>L'Acavallo Gel Pad surélevé à l'arrière c'est l'accessoire qu'on ne connaît pas forcément mais qu'on ne peut plus enlever une fois qu'on l'a essayé. C'est la solution idéale quand la selle tend à basculer vers l'avant ou quand le cheval a le dos un peu creux à l'arrière — ça compense sans avoir à faire réviser la selle en urgence. Le gel thérapeutique fait vraiment la différence sur le confort du cheval lors des séances intensives. Best-seller absolu chez les revendeurs spécialisés pour une bonne raison : ça marche, c'est discret, et le prix est raisonnable pour ce que ça apporte.</p>
+      </div>
+
+      <div id="offre" class="product-section affiliate-block reveal">
+        <div class="affiliate-ctas">
+          <a href="https://www.horseven.fr/marques/acavallo/acavallo-gel-pad-sureleve-a-l-arriere-noir_4088_3939/" class="btn btn-primary" rel="sponsored noopener" target="_blank">Voir le pad sur Horseven →</a>
+        </div>
+        <p class="affiliate-disclosure">Lien affilié — cela ne change pas le prix pour vous.</p>
+      </div>
+
+      <div class="product-section">
+        <h2>Autres pépites du moment</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'acavallo-gel-pad');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>

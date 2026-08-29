@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gants hiver tactiles — Bon plan | cavalière futée</title>
+<meta name="description" content="-9€ sur les gants hiver compatibles écran tactile : détail de l'offre, pourquoi c'est un bon plan, et notre avis honnête.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="bons-plans">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="/bons-plans.html">Bons plans</a>
+        <span class="sep">›</span>
+        <span class="current">Gants hiver tactiles</span>
+      </nav>
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="https://picsum.photos/seed/gants1/900/675" alt="Gants hiver compatibles écran tactile">
+          <span class="badge badge-promo">-9€</span>
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Gants</span>
+          <h1>Gants hiver compatibles écran tactile</h1>
+          <p class="product-subtitle">Doublure thermique, paume renforcée</p>
+          <span class="product-price"><span class="old">38€</span>29€</span>
+          <p class="product-pitch">Doublure thermique et paume renforcée, sans perdre le contact avec les rênes — un accessoire d'hiver qu'on rachète chaque année, à prix réduit.</p>
+          <a href="#profiter" class="btn btn-primary">Profiter de l'offre ↓</a>
+        </div>
+      </div>
+
+      <div class="back-to-category">
+        <a href="/bons-plans.html" class="btn btn-outline btn-sm">← Retour aux bons plans</a>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>L'offre en détail</h2>
+        <p>-9€ sur les gants hiver compatibles écran tactile. Offre valable sur toutes les tailles disponibles en stock.</p>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi c'est un bon plan</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>-24% sur un accessoire d'hiver que tout le monde finit par racheter.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Compatibilité écran tactile : plus besoin de les retirer pour ton téléphone.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Paume renforcée : ne perd pas en précision de rêne malgré l'épaisseur thermique.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis</h2>
+        <p>Un très bon rapport qualité-prix pour l'hiver. Prends une taille en dessous si tu as l'habitude de gants fins : la doublure thermique ajoute du volume.</p>
+      </div>
+
+      <div id="profiter" class="product-section affiliate-block reveal">
+        <h2>Profiter de l'offre</h2>
+        <div class="affiliate-ctas">
+          <a href="#" class="btn btn-primary" rel="sponsored noopener" target="_blank">Profiter de l'offre →</a>
+        </div>
+        <p class="affiliate-disclosure">Lien affilié — cela ne change pas le prix pour vous.</p>
+      </div>
+
+      <div class="product-section">
+        <h2>Autres bons plans du moment</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'gants-hiver-tactile');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>

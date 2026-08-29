@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparateur | cavalière futée</title>
+<meta name="description" content="Choisis ta catégorie d'équipement, réponds à quelques questions et reçois une recommandation personnalisée.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="css/style.css?v=185">
+</head>
+<body data-page="comparateur">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">Recommandations sur-mesure</span>
+      <h1>Trouve ton équipement idéal</h1>
+      <p>Selle, casque, pantalon, protections, tapis, masque anti-mouches ou compléments : choisis ta catégorie, réponds à quelques questions et reçois une recommandation personnalisée en quelques secondes — avec les liens vers les meilleures offres du moment.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:40px;">
+    <div class="container">
+      <div class="compare-tool reveal">
+
+        <div class="progress-track" id="progressTrack">
+          <div class="seg done"></div>
+          <div class="seg"></div>
+        </div>
+
+        <form id="compareForm">
+
+          <!-- STEP 1 : catégorie -->
+          <div class="step active" data-step="1">
+            <div class="step-title">Étape 1 sur 2</div>
+            <h3>Quel équipement cherches-tu ?</h3>
+            <div class="option-grid" data-field="category" id="categoryGrid">
+              <!-- injecté par js/comparateur.js -->
+            </div>
+            <div class="step-actions">
+              <span></span>
+              <button type="button" class="btn btn-primary" data-next>Suivant →</button>
+            </div>
+          </div>
+
+          <!-- STEP 2 : questions dynamiques selon la catégorie -->
+          <div class="step" data-step="2">
+            <div class="step-title">Étape 2 sur 2</div>
+            <h3 id="step2Title">Quelques précisions</h3>
+            <div id="dynamicQuestions"><!-- injecté par js/comparateur.js --></div>
+            <div class="field" style="margin-top:8px;">
+              <label style="display:block;font-size:13.5px;font-weight:600;color:var(--brun);margin-bottom:6px;">Une précision à ajouter ? <span style="color:var(--texte-doux);font-weight:400;">(facultatif)</span></label>
+              <textarea id="precisions" placeholder="Ex : jument de 15 ans, plutôt sensible du dos, préfère le cuir au synthétique…"></textarea>
+            </div>
+            <div class="step-actions">
+              <button type="button" class="btn btn-outline" data-prev>← Retour</button>
+              <button type="submit" class="btn btn-primary" id="submitCompareBtn">Voir ma recommandation ✨</button>
+            </div>
+          </div>
+
+        </form>
+
+        <div class="loading-panel" id="loadingPanel">
+          <div class="spinner"></div>
+          <p>Analyse de ton profil en cours…</p>
+        </div>
+
+        <div class="result-panel" id="resultPanel">
+          <div id="resultContent"></div>
+          <div class="step-actions" style="margin-top:24px;">
+            <button type="button" class="btn btn-outline" id="restartBtn">↺ Recommencer</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js?v=185"></script>
+<script src="js/comparateur-data.js?v=185"></script>
+<script src="js/comparateur-redirect.js?v=185"></script>
+<script src="js/main.js?v=185"></script>
+<script src="js/comparateur.js?v=185"></script>
+</body>
+</html>

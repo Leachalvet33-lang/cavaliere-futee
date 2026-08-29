@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>L'airbag qui pourrait vous sauver la vie — Pépite du moment | cavalière futée</title>
+<meta name="description" content="Gilet airbag Horse Pilot Twist'Air 2.0 Dark Night : pourquoi c'est une pépite du moment, notre avis, et où le trouver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="accueil">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="/assets/airbag-twistair-2.jpg" alt="Gilet airbag Horse Pilot Twist'Air 2.0 Dark Night">
+          <span class="badge badge-terracotta">Sécurité essentielle</span>
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Airbag</span>
+          <h1>L'airbag qui pourrait vous sauver la vie</h1>
+          <p class="product-subtitle">Horse Pilot Twist'Air 2.0 — Dark Night</p>
+          <span class="product-price">532,95€</span>
+          <p class="product-pitch">Fabriqué en France et homologué norme NF S72-800:2022, avec un système de connexion aimanté à une seule main. Un airbag ultra discret qui protège vraiment sans jamais gêner le mouvement.</p>
+          <a href="#offre" class="btn btn-primary">Voir le gilet ↓</a>
+        </div>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi c'est une pépite</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Fabriqué en France et homologué norme NF S72-800:2022 — la référence en matière de sécurité équestre.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Protège les zones vitales en cas de chute : cervicales, dos, hanches, colonne vertébrale, abdomen, thorax et coccyx.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Cartouche de 42g de gaz — l'une des plus grandes capacités du marché pour un gonflage maximal.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Système de connexion aimanté — se connecte et déconnecte à une seule main sans lâcher les rênes.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Design ultra discret et proche du corps — peut se porter sous les vestes compatibles Horse Pilot en concours.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Tissu bi-stretch avec zones mesh sur les côtés et le dos — respirabilité optimale même à l'effort intense.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Certifié EPI (Équipement de Protection Individuel) — garantie 2 ans extensible à 3 ans.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Livré avec sangle d'attache et cartouche de gaz — prêt à l'emploi dès réception.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Révisable tous les 2 ans ou tous les 5 gonflages pour maintenir une efficacité maximale.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis honnête</h2>
+        <p>Le Twist'Air 2.0 c'est l'investissement sécurité qu'on remet trop souvent à plus tard — et qu'on ne devrait jamais reporter. Horse Pilot et In&amp;motion ont réussi quelque chose de remarquable : un airbag qui protège vraiment sans gêner le moindre mouvement. Le système de déconnexion aimanté à une main est une vraie révolution au quotidien — plus besoin de lâcher les rênes pour l'enlever. Le coloris Dark Night est sobre et élégant, parfait sous une veste de concours. Si vous ne devez retenir qu'une seule pépite de cette liste, c'est celle-ci.</p>
+      </div>
+
+      <div id="offre" class="product-section affiliate-block reveal">
+        <div class="affiliate-ctas">
+          <a href="https://horze.fr/products/gilet-airbag-twistair-2-0-dark-night-xxs-1" class="btn btn-primary" rel="sponsored noopener" target="_blank">Voir le gilet sur Horze →</a>
+        </div>
+        <p class="affiliate-disclosure">Lien affilié — cela ne change pas le prix pour vous.</p>
+      </div>
+
+      <div class="product-section">
+        <h2>Autres pépites du moment</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'airbag-twistair-2');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>

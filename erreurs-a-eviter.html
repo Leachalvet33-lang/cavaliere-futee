@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nos recommandations | cavalière futée</title>
+<meta name="description" content="Les produits décevants, les pièges à éviter et les marques à fuir en équipement d'équitation, avec un ton direct et honnête.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="css/style.css?v=185">
+</head>
+<body data-page="erreurs">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+
+  <section class="page-hero oops-hero">
+    <div class="container">
+      <span class="eyebrow" style="color:var(--terracotta);">Sélectionné avec exigence, recommandé avec conviction</span>
+      <h1>Nos recommandations</h1>
+      <p>Des guides pensés par et pour les cavalier(es).</p>
+    </div>
+  </section>
+
+  <section style="padding-top:44px;">
+    <div class="container" style="max-width:880px;">
+      <div class="section-head">
+        <h2>Ce qu'on a testé (et regretté)</h2>
+        <p>Chaque fiche compare le piège dans lequel on tombe facilement, et ce qu'on te conseille de faire à la place.</p>
+      </div>
+
+      <div id="oops-list"></div>
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/data.js?v=185"></script>
+<script src="js/main.js?v=185"></script>
+<script>
+  function cfOopsCard(o) {
+    return `
+      <article class="oops-card reveal">
+        <div class="oops-head">
+          <div>
+            <span class="card-tag">${o.category}</span>
+            <h3>${o.title}</h3>
+          </div>
+        </div>
+        <div class="oops-grid-2">
+          <div class="oops-col piege">
+            <strong>Le piège</strong>
+            <p>${o.piege}</p>
+          </div>
+          <div class="oops-col conseil">
+            <strong>Ce qu'on te conseille</strong>
+            <p>${o.conseil}</p>
+          </div>
+        </div>
+      </article>
+    `;
+  }
+
+  document.addEventListener('partialsReady', () => {
+    document.getElementById('oops-list').innerHTML = CF_DATA.oops.map(cfOopsCard).join('');
+    setupScrollReveal();
+  });
+</script>
+</body>
+</html>

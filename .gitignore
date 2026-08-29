@@ -1,0 +1,4 @@
+.env
+contact_messages.log
+__pycache__/
+.DS_Store

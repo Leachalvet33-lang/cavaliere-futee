@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Le mors de toutes les bouches | cavalière futée</title>
+<meta name="description" content="Mors simple Chantilly : fiche produit cavalière futée.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="guides">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <a href="/index.html">Accueil</a>
+        <span class="sep">›</span>
+        <a href="/guides.html">Équipement</a>
+        <span class="sep">›</span>
+        <a href="/guides.html#filets">Filets &amp; embouchures</a>
+        <span class="sep">›</span>
+        <span class="current">Le mors de toutes les bouches</span>
+      </nav>
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="/assets/mors-chantilly.jpg" alt="Mors simple Chantilly">
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Embouchure</span>
+          <h1>Le mors de toutes les bouches</h1>
+          <p class="product-subtitle">Mors simple Chantilly — douceur et légèreté</p>
+          <span class="product-price">Dès 15€</span>
+          <p class="product-pitch">Le mors le plus doux et le plus léger du marché — anneaux ronds coulissants, action directe et sans levier. Parfait pour débuter ou pour les bouches sensibles.</p>
+          <a href="#profiter" class="btn btn-primary">Voir le mors ↓</a>
+        </div>
+      </div>
+
+      <div class="back-to-category">
+        <a href="/guides.html#filets" class="btn btn-outline btn-sm">← Retour aux filets &amp; embouchures</a>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi on l'aime</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Le mors le plus doux et le plus léger du marché — parfait pour les jeunes chevaux et les bouches sensibles.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Anneaux ronds coulissants — action directe et sans levier sur les commissures des lèvres.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Idéal pour débuter en mors ou pour les chevaux qui n'ont jamais été mis à la main.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Disponible en acier inoxydable, cuivre ou résine selon les sensibilités du cheval.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pour qui c'est fait</h2>
+        <ul class="profile-list">
+          <li>
+            <div><strong>Jeunes chevaux</strong><span>En début de débourrage</span></div>
+          </li>
+          <li>
+            <div><strong>Bouche très sensible</strong><span>Chevaux qui réagissent mal aux mors plus puissants</span></div>
+          </li>
+          <li>
+            <div><strong>Cavalières débutantes</strong><span>Qui apprennent à doser leurs mains</span></div>
+          </li>
+        </ul>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Les détails techniques</h2>
+        <ul class="tech-specs">
+          <li><span class="spec-label">Anneaux</span><span class="spec-value">Ronds coulissants — attention aux pincements aux commissures, vérifier régulièrement</span></li>
+          <li><span class="spec-label">Brisure</span><span class="spec-value">Simple ou double brisure selon les modèles</span></li>
+          <li><span class="spec-label">Matières</span><span class="spec-value">Acier inoxydable, cuivre, résine</span></li>
+          <li><span class="spec-label">Tailles</span><span class="spec-value">De 100mm à 145mm selon la morphologie du cheval</span></li>
+        </ul>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis honnête</h2>
+        <p>Le Chantilly c'est le mors par excellence pour démarrer sereinement. Pour un cheval jeune ou sensible c'est souvent la meilleure façon de commencer avant de passer à quelque chose de plus précis.</p>
+      </div>
+
+      <div id="profiter" class="product-section affiliate-block reveal">
+        <h2>Où l'acheter au meilleur prix</h2>
+        <div class="affiliate-ctas">
+          <a href="https://horze.fr/products/double-jointed-loose-ring-snaffle-14mm-no-color" class="btn btn-primary" rel="sponsored noopener" target="_blank">Voir le mors Chantilly sur Horze →</a>
+        </div>
+        <p class="affiliate-disclosure">Lien affilié — cela ne change pas le prix pour vous.</p>
+      </div>
+
+      <div class="product-section">
+        <h2>Vous aimerez aussi</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'mors-simple-chantilly');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>

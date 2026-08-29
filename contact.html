@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | cavalière futée</title>
+<meta name="description" content="Une question, une remarque ou une proposition de partenariat affilié ? Contacte l'équipe cavalière futée.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="css/style.css?v=185">
+</head>
+<body data-page="contact">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">On te répond vite</span>
+      <h1>Contacte l'équipe</h1>
+      <p>Une question sur un produit, une suggestion de guide, ou une envie de partenariat affilié ? Écris-nous.</p>
+    </div>
+  </section>
+
+  <section style="padding-top:40px;">
+    <div class="container contact-grid">
+
+      <div class="form-card reveal">
+        <h2 style="margin-bottom:6px;">Envoie-nous un message</h2>
+        <p style="margin-bottom:24px;">On lit tout, on répond sous 48h ouvrées.</p>
+
+        <form id="contactForm" action="https://formspree.io/f/xbgrqyvq" method="POST">
+          <div class="field">
+            <label for="nom">Nom</label>
+            <input type="text" id="nom" name="nom" required placeholder="Ton nom">
+          </div>
+          <div class="field">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required placeholder="ton@email.fr">
+          </div>
+          <div class="field">
+            <label for="sujet">Sujet</label>
+            <select id="sujet" name="sujet">
+              <option value="question">Une question</option>
+              <option value="partenariat">Proposer un partenariat affilié</option>
+              <option value="suggestion">Suggérer un produit ou un guide</option>
+              <option value="autre">Autre</option>
+            </select>
+          </div>
+          <div class="field">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" required placeholder="Dis-nous tout…"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block">Envoyer le message</button>
+          <div id="contactFeedback" class="notice" style="display:none;margin-top:16px;"></div>
+        </form>
+      </div>
+
+      <div class="info-card reveal">
+        <span class="eyebrow">Bon à savoir</span>
+        <h4>Envie de collaborer ?</h4>
+        <p style="font-size:14px;">Marques et boutiques équestres, cavalière futée est ouverte aux partenariats affiliés sérieux. Choisis "Proposer un partenariat affilié" dans le formulaire et présente-nous ton produit.</p>
+        <ul>
+          <li>📬 <a href="mailto:cavaliere.futee@outlook.fr">cavaliere.futee@outlook.fr</a></li>
+          <li>⏱️ Réponse sous 48h ouvrées</li>
+          <li>📍 Basée en France, on livre nos conseils partout</li>
+        </ul>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<div id="site-footer"></div>
+
+<script src="js/main.js?v=185"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const form = e.target;
+    const feedback = document.getElementById('contactFeedback');
+    const submitBtn = form.querySelector('button[type="submit"]');
+
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Envoi en cours…';
+
+    try {
+      const res = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' },
+      });
+      if (!res.ok) throw new Error('server');
+      feedback.className = 'notice notice-info';
+      feedback.textContent = 'Votre message a bien été envoyé ! Nous vous répondrons dans les plus brefs délais 🐴';
+      form.reset();
+    } catch (err) {
+      feedback.className = 'notice notice-info';
+      feedback.textContent = "Une erreur est survenue lors de l'envoi — réessaie ou écris-nous directement à cavaliere.futee@outlook.fr.";
+    } finally {
+      feedback.style.display = 'block';
+      submitBtn.disabled = false;
+      submitBtn.textContent = 'Envoyer le message';
+    }
+  });
+</script>
+</body>
+</html>

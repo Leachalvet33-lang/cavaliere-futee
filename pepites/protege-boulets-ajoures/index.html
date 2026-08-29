@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Protège-boulets ajourés — Pépite du moment | cavalière futée</title>
+<meta name="description" content="Protège-boulets ajourés compétition : pourquoi c'est une pépite du moment, notre avis, et où les trouver.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>html{background:#5C3820}</style>
+<link rel="stylesheet" href="/css/style.css?v=185">
+</head>
+<body data-page="accueil">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div id="site-header"></div>
+
+<main id="main">
+  <section style="padding-top:32px;">
+    <div class="container">
+
+      <div class="product-hero reveal">
+        <div class="product-hero-img">
+          <img src="https://picsum.photos/seed/boulet1/900/675" alt="Protège-boulets ajourés compétition">
+          <span class="badge badge-terracotta">Bon plan</span>
+        </div>
+        <div class="product-hero-info">
+          <span class="card-tag">Protections &amp; boulets</span>
+          <h1>Protège-boulets ajourés compétition</h1>
+          <span class="product-price"><span class="old">85€</span>65€</span>
+          <p class="product-pitch">Ventilation maximale et fermeture rapide, plébiscités en concours de saut d'obstacles. Une pépite à ce prix, rarement vue sur ce modèle très demandé en CSO.</p>
+          <a href="#offre" class="btn btn-primary">Voir l'offre ↓</a>
+        </div>
+      </div>
+
+      <div class="product-section reveal">
+        <h2>Pourquoi c'est une pépite</h2>
+        <div class="why-love-grid">
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Un modèle plébiscité en compétition, pas un premier prix générique.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Ventilation maximale utile toute l'année, pas seulement en été.</p>
+          </div>
+          <div class="why-love-item">
+            <span class="why-icon">–</span>
+            <p>Une remise de -24% rarement vue sur ce modèle précis.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-section honest-review reveal">
+        <h2>Notre avis</h2>
+        <p>Un basique fiable à ce prix, aucune raison d'hésiter. Vérifie simplement la taille sur le guide du fabricant avant de commander.</p>
+      </div>
+
+      <div id="offre" class="product-section affiliate-block reveal">
+        <div class="affiliate-ctas">
+          <a href="#" class="btn btn-primary" rel="sponsored noopener" target="_blank">Voir l'offre →</a>
+        </div>
+        <p class="affiliate-disclosure">Lien affilié — cela ne change pas le prix pour vous.</p>
+      </div>
+
+      <div class="product-section">
+        <h2>Autres pépites du moment</h2>
+        <div class="card-grid" id="grid-similar"></div>
+      </div>
+
+    </div>
+  </section>
+</main>
+
+<div id="site-footer"></div>
+
+<script src="/js/data.js?v=185"></script>
+<script src="/js/render.js?v=185"></script>
+<script src="/js/main.js?v=185"></script>
+<script>
+  document.addEventListener('partialsReady', () => {
+    const heroProduct = CF_DATA.products.find((p) => p.id === 'protections-boulets-cso');
+    if (heroProduct && heroProduct.img) {
+      const heroImgEl = document.querySelector('.product-hero-img img');
+      if (heroImgEl) heroImgEl.src = heroProduct.img;
+    }
+    const similar = cfGetSimilarProducts(heroProduct);
+    cfRenderGrid('grid-similar', similar, { reveal: true, urlKey: '_relUrl' });
+  });
+</script>
+</body>
+</html>
