@@ -22,11 +22,12 @@
   --ombre: 0 10px 30px -12px rgba(92, 56, 32, 0.25);
   --ombre-hover: 0 16px 40px -14px rgba(92, 56, 32, 0.32);
   --conteneur: 1180px;
+  --header-h: 108px;
 }
 
 * { box-sizing: border-box; }
 
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: hidden; }
 
 body {
   margin: 0;
@@ -36,6 +37,7 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 img { max-width: 100%; display: block; }
@@ -232,7 +234,7 @@ section { padding: 72px 0; }
   .nav-toggle { display: block; }
   .main-nav {
     position: fixed;
-    inset: 64px 0 0 0;
+    inset: var(--header-h) 0 0 0;
     background: var(--ivoire);
     flex-direction: column;
     align-items: stretch;
@@ -241,9 +243,15 @@ section { padding: 72px 0; }
     transform: translateX(100%);
     transition: transform 0.3s ease;
     overflow-y: auto;
+    z-index: 99;
   }
   .main-nav.open { transform: translateX(0); }
   .main-nav a { padding: 14px 16px; font-size: 17px; }
+}
+
+@media (max-width: 480px) {
+  :root { --header-h: 80px; }
+  .logo-img { height: 52px; max-height: 52px; }
 }
 
 /* ---------- hero plein écran ---------- */
@@ -251,6 +259,7 @@ section { padding: 72px 0; }
 .hero-full {
   position: relative;
   height: 100vh;
+  height: 100svh;
   min-height: 620px;
   max-height: 980px;
   display: flex;
@@ -343,7 +352,7 @@ section { padding: 72px 0; }
 .pick-card-ctas .btn { align-self: flex-start; }
 
 @media (max-width: 640px) {
-  .hero-full { min-height: 100vh; }
+  .hero-full { min-height: 100vh; min-height: 100svh; }
   .hero-picks { margin-top: -60px; }
   .pick-card { flex-basis: 210px; }
   .pick-card-img, .pick-card-img img { height: 160px; }
@@ -1240,4 +1249,46 @@ textarea { resize: vertical; min-height: 100px; }
 
 @media (prefers-reduced-motion: reduce) {
   .cf-transition, .cf-transition-horse, .cf-horse-burst { display: none !important; }
+}
+
+/* ---------- optimisation mobile (≤768px) ---------- */
+
+@media (max-width: 768px) {
+  /* grilles de cartes en une seule colonne */
+  .card-grid,
+  .oops-list,
+  .why-love-grid,
+  .footer-grid,
+  .oops-grid-2 {
+    grid-template-columns: 1fr;
+  }
+
+  /* le comparateur reste en grille 2x2 plutôt que de s'effondrer en 1 colonne */
+  .option-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+  .option-card { padding: 14px; }
+
+  /* boutons CTA : cible tactile confortable (≥44px) */
+  .btn-sm { padding: 13px 20px; min-height: 44px; }
+  .btn { min-height: 44px; }
+
+  /* bouton de résultat du comparateur en pleine largeur */
+  .result-panel .btn,
+  #goToProductBtn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* lisibilité : texte de contenu jamais sous 14px */
+  .card-desc,
+  .notice,
+  .oops-col p,
+  .retailer-card-pitch,
+  .compare-block .compare-avis,
+  .field label,
+  .tip-banner-body p {
+    font-size: 14px;
+  }
 }
